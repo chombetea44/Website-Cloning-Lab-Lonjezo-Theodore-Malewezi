@@ -1,5 +1,5 @@
 
-# Website Cloning with SET (Educational Use Only)
+# Website Cloning with SET 
 
 ## Overview
 This repository demonstrates how website cloning works using the Social Engineering Toolkit (SET) on Kali Linux.
