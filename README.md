@@ -97,6 +97,8 @@ SET stores captured credentials in XML reports under:
 The website cloning exercise with SET (Social Engineering Toolkit) demonstrates how one can replicate legitimate sites to harvest credentials. By walking through the process in a controlled lab environment (e.g., DVWA). with this lab, we gain insight into the mechanics of phishing attacks and the importance of user awareness. This technique underscores why organizations must implement multi‑layered defenses such as SSL/TLS, phishing detection, user training, and monitoring of suspicious login activity.
 
 
+
+
 # SMB Enumeration and Interaction with Kali Linux
 
 ## Overview
@@ -117,34 +119,42 @@ This repository demonstrates how to use tools like enum4linux, nmap and smbclien
 
 
 
-3. Explore enum4linux Options
+2. Explore enum4linux Options
    
 **enum4linux -help**
 
 This command displays available flags and usage of tool.
 
-4. Scan Network with Nmap
+<img width="774" height="643" alt="Screenshot (33)" src="https://github.com/user-attachments/assets/20c17d12-3cd8-4571-af48-d155aba1b52e" />
+
+3. Scan Network with Nmap
    
 **nmap -sN 172.17.0.0/24**
 
 Performs a TCP NULL scan across the subnet to identify live hosts.
 
+<img width="952" height="647" alt="Screenshot (20)" src="https://github.com/user-attachments/assets/7d73bf9a-7ab7-49be-ba50-804a9578b657" />
+
 4.Enumerate SMB Information
 Run different enum4linux flags against the target IP (172.17.0.2):
 
-* enum4linux -U 172.17.0.2   # List users
+* enum4linux -U 172.17.0.2   - List users
+<img width="968" height="532" alt="Screenshot (23)" src="https://github.com/user-attachments/assets/08e8bef1-4648-44aa-b5a3-32c4e039c3d1" />
 
-* enum4linux -n 172.17.0.2   # Get NetBIOS info
+* enum4linux -n 172.17.0.2   - Get NetBIOS info
 
-* enum4linux -o 172.17.0.2   # OS information
+* enum4linux -o 172.17.0.2   - OS information
 
-* enum4linux -S 172.17.0.2   # Share enumeration
+* enum4linux -S 172.17.0.2   - Share enumeration
 
-* enum4linux -Sv 172.17.0.2  # Verbose share enumeration
+* enum4linux -Sv 172.17.0.2  - Verbose share enumeration
+<img width="974" height="537" alt="Screenshot (22)" src="https://github.com/user-attachments/assets/62cda158-a168-4f7f-8f4e-07194a2d7d3a" />
 
 * enum4linux -P 172.17.0.2   # Password policy
+<img width="863" height="530" alt="Screenshot (25)" src="https://github.com/user-attachments/assets/8faab5f2-6f87-48ac-81b3-ec024c45b1fa" />
 
 * enum4linux -a 172.17.0.2   # All enumeration options
+<img width="968" height="427" alt="Screenshot (27)" src="https://github.com/user-attachments/assets/e72efcd8-7f46-47bb-aaaf-62e4b9f445e6" />
 
 
 5. Explore smbclient
@@ -153,15 +163,20 @@ Run different enum4linux flags against the target IP (172.17.0.2):
 
 This command lists available shares on the target.
 
+<img width="970" height="774" alt="Screenshot (28)" src="https://github.com/user-attachments/assets/cffa306d-cbcb-4e16-86ca-153656bd2919" />
+
 6. Connect to a Share
    
 **smbclient //172.17.0.2/tmp**
 
-7. Create a Test File (Safe Example)
+<img width="626" height="178" alt="Screenshot (30)" src="https://github.com/user-attachments/assets/9634f0fa-943b-4808-9cb8-68a7cc159e1f" />
+
+7. Create a Test File 
    
 Instead of creating virus.exe, create a harmless text file:
-nano testfile.txt
+nano group_work.txt
 
+<img width="586" height="161" alt="Screenshot (31)" src="https://github.com/user-attachments/assets/e9a8d306-3098-418c-9e93-7c1855af7434" />
 
 Type:
 I am a student of Parocyber
@@ -178,6 +193,7 @@ I am a student of Parocyber
     **put testfile.txt group_work.txt**
     
 **Enter Directory to see uploaded file**
+<img width="971" height="768" alt="Screenshot (32)" src="https://github.com/user-attachments/assets/bc05d7d5-caa8-4584-84ec-c49fca260260" />
 
 **quit**
 
